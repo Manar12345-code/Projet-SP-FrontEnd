@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un nouveau vetement :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Numéro </label>
+        <input type="text" [(ngModel)]="newVetement.idVetement" name="idVetement" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Title </label>
+        <input type="text" [(ngModel)]="newVetement.nomVetement" name="nomVetement" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Prix</label>
+        <input type="text" [(ngModel)]="newVetement.prixVetement" name="prixVetement" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date Création</label>
+        <input type="date" [(ngModel)]="newVetement.dateCreation" name="dateCreation" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Catégorie </label>
+            <select class="form-control"  [(ngModel)]="newVetement.categorie"  [ngModelOptions]="{standalone: true}">
+            <option [selected]="true">Choisir une catégorie </option>
+            <option  *ngFor="let cat of categorieList" [ngValue]="cat">{{cat.nomCat}}</option>    
+            </select>
+            </div>
+          
+
+        <div class="mt-2">
+        <button type="submit" (click)="addVetement()" class="btn btn-success">Ajouter</button>
+    
+        </div>
+        </form>
+        </div>

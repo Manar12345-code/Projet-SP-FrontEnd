@@ -1,0 +1,22 @@
+<div class="container">
+    <div>
+    <h2>Modifier une Catégorie :</h2>
+    </div>
+    <form >
+    <div  hidden class="col-sm-2 col-md-2 col-lg-2">
+    <label >Identifiant</label>
+    <input readonly type="text" [(ngModel)]="currentCategorie.idCat" name="idCat" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom</label>
+    <input type="text"[(ngModel)]= "currentCategorie.nomCat" name="nomCat" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Description</label>
+    <input type="text" [(ngModel)]= "currentCategorie.descriptionCat" name="descriptionCat" class="form-control">
+    </div>
+    <div class="mt-2">
+    <button type="submit" (click)="updateCategorie()" class="btn btn-success">Modifer</button>
+    </div>
+    </form>
+    </div>    
